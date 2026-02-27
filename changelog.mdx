@@ -1,0 +1,150 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and fixes in yangheIDE to stay informed about new features.
+---
+
+## Recent Updates
+
+<Callout kind="info">
+  Stay current with yangheIDE releases. Check the [GitHub releases page](https://github.com/your-org/yangheide/releases) for full details, download links, and source code.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added real-time collaboration for multiplayer editing sessions
+- Introduced plugin marketplace with 20+ community extensions
+- Support for AI-powered code completion using local models
+
+## Improvements
+
+- Enhanced syntax highlighting for 15 new languages
+- Reduced startup time by 40% with optimized caching
+
+## Bug Fixes
+
+- Fixed crash on large file opens (`>500MB`)
+- Resolved theme switching lag in dark mode
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["improvement", "bugfix"]}>
+
+## Improvements
+
+- Upgraded terminal emulator with better ANSI color support
+- Improved search and replace with regex preview
+
+## Bug Fixes
+
+- Fixed undo/redo stack overflow on long sessions
+- Corrected file watcher issues on Windows networks
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core editor with vim/emacs keybindings
+- Integrated Git client with visual diff viewer
+- Customizable workspace layouts
+
+## Breaking Changes
+
+- Migrated config from JSON to TOML format
+- Removed legacy `~/.yangheide` directory (use `~/.config/yangheide`)
+
+</Update>
+
+## Migration Guide
+
+Follow these steps to upgrade yangheIDE smoothly.
+
+<Steps>
+  <Step title="Backup Config" icon="database">
+
+    Save your current settings:
+
+````bash
+cp -r ~/.config/yangheide ~/.config/yangheide-backup
+````
+
+  </Step>
+  <Step title="Download Release" icon="download">
+
+    Get the latest binary from releases.
+
+  </Step>
+  <Step title="Install" icon="package">
+
+    <Tabs>
+      <Tab title="macOS" icon="apple">
+
+````bash
+brew install --cask yangheide
+````
+
+      </Tab>
+      <Tab title="Linux" icon="linux">
+
+````bash
+sudo dpkg -i yangheide_1.2.0_amd64.deb
+````
+
+      </Tab>
+    </Tabs>
+
+  </Step>
+  <Step title="Migrate Config" icon="settings">
+
+    Update to TOML if from v0.x:
+
+````toml
+# config.toml
+theme = "dark"
+keybind = "vim"
+````
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Test in a new workspace first. Run `yangheide --version` to verify installation.
+</Callout>
+
+## Upcoming Roadmap
+
+Explore planned enhancements.
+
+<Columns cols={3}>
+  <Card title="v1.3.0" icon="zap" href="https://github.com/your-org/yangheide/milestones">
+    Remote development over SSH.
+  </Card>
+  <Card title="v1.4.0" icon="shield" href="https://github.com/your-org/yangheide/milestones">
+    End-to-end encryption for projects.
+  </Card>
+  <Card title="v2.0.0" icon="rocket" href="https://github.com/your-org/yangheide/milestones">
+    Native mobile companion app.
+  </Card>
+</Columns>
+
+<Expandable title="Deprecations" default-open="false">
+
+In v1.2.0:
+
+- Legacy JSON config deprecated (remove by v2.0)
+- `yangheide --debug` flag replaced with `yangheide --trace`
+
+Migration example:
+
+````bash
+# Old JSON
+mv ~/.config/yangheide/config.json ~/.config/yangheide/config.json.bak
+
+# New TOML (auto-generated on first run)
+yangheide --migrate-config
+````
+
+</Expandable>

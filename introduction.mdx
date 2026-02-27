@@ -1,0 +1,103 @@
+---
+title: Introduction to yangheIDE
+description: Discover yangheIDE, a versatile platform for organizing and managing your project documentation with ease and efficiency.
+---
+
+<Callout kind="info" title="Starter Kit Template">
+  This documentation was generated as a starter kit template based on your brand. Please review and customize the content to accurately reflect your product's features, APIs, and capabilities.
+</Callout>
+
+## Overview
+
+yangheIDE provides a centralized space for you to create, organize, and manage all your project documentation. You can build structured docs with Markdown and MDX support, collaborate with your team, and keep everything version-controlled. Focus on writing while yangheIDE handles search, navigation, and deployment.
+
+This platform suits developers, product teams, and documentation writers who need an efficient way to maintain living docs without complex setups.
+
+## Key Features
+
+<Columns cols={3}>
+  <Card title="MDX & Markdown Support" icon="file-text" href="#mdx-support">
+    Write rich documentation using MDX components, code blocks, and interactive elements like tabs and steps.
+  </Card>
+  <Card title="Version Control Integration" icon="git-branch" href="#version-control">
+    Seamlessly connect to GitHub or GitLab for automatic builds and deployments on every push.
+  </Card>
+  <Card title="Search & Navigation" icon="search" href="#search">
+    Full-text search across all docs plus automatic sidebar generation for easy browsing.
+  </Card>
+</Columns>
+
+## Who Should Use yangheIDE
+
+Target users include software engineers documenting APIs, product managers creating user guides, and open-source maintainers organizing READMEs and changelogs. Common use cases:
+
+- Internal team wikis for onboarding new hires
+- Public API references with interactive examples
+- Project handoffs with versioned release notes
+
+<Expandable title="Advanced Use Cases" default-open="false">
+
+For larger teams, integrate yangheIDE with CI/CD pipelines to generate docs from code comments. Solo developers use it for personal knowledge bases with custom themes.
+
+</Expandable>
+
+## Quick Start
+
+Get up and running in minutes.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+
+    Sign up at `https://yangheide.com` with your email or GitHub account.
+
+  </Step>
+  <Step title="New Project" icon="plus">
+
+    Click "New Project" and connect your Git repository.
+
+    <CodeGroup tabs="GitHub,GitLab">
+    ````bash
+    git remote add origin https://github.com/yourusername/your-repo.git
+    git push -u origin main
+    ````
+    ````bash
+    git remote add origin https://gitlab.com/yourusername/your-repo.git
+    git push -u origin main
+    ````
+    </CodeGroup>
+
+  </Step>
+  <Step title="Add Docs" icon="file-plus">
+
+    Create your first `introduction.mdx` file in the `docs/` folder and push changes.
+
+  </Step>
+  <Step title="Deploy" icon="rocket">
+
+    yangheIDE automatically builds and deploys your site. Access at `https://docs.yangheide.com/your-project`.
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Customize your site's branding with the `#3B82F6` primary color in the theme settings.
+</Callout>
+
+## Next Steps
+
+Explore these guides to dive deeper:
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="zap" href="/quickstart">
+    Set up your first documentation site.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your docs with API keys and webhooks.
+  </Card>
+  <Card title="Customization" icon="palette" href="/configuration">
+    Theme and layout options.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    Latest updates and improvements.
+  </Card>
+</Columns>
